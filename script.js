@@ -10,7 +10,9 @@ async function loadPage(pageId) {
     pageContent.innerHTML = html;
 
     navButtons.forEach((btn) => btn.classList.remove("active"));
-    const activeBtn = document.querySelector(`[data-page="${pageId}"]`);
+    const activeBtn = document.querySelector(
+      `[data-page="${pageId.split("/")[0]}"]`
+    );
     if (activeBtn) activeBtn.classList.add("active");
 
     window.scrollTo({ top: 0, behavior: "smooth" });
