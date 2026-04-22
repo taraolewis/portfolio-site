@@ -30,4 +30,4 @@ navButtons.forEach((btn) => {
   });
 });
 
-loadPage("about");
+loadPage("projects");
